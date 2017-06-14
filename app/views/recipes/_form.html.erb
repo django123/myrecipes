@@ -1,0 +1,23 @@
+<%= render 'partials/errors', obj: @recipe  %>
+
+<div class="row">
+  <div class="well col-md-8 col-md-offset-2">
+
+    <%= simple_form_for @recipe, wrapper: :horizontal_form,html: {class: 'form-horizontal'}  do |f|%>
+
+        <%= f.input  :name%>
+        <%= f.input  :summary%>
+        <%= f.input  :description, as: :text %>
+        <% if @recipe.picture? %>
+            <p>
+              <%= image_tag @recipe.picture_url(:thumb) %>
+            </p>
+        <% end %>
+        <%= f.input  :picture, as: :file %>
+        <%= f.button :submit,  @recipe.new_record? ? 'Create Recipe' : 'Edit Recipe',
+                     class: "btn btn-success "%>
+
+    <%end %>
+
+  </div>
+</div>

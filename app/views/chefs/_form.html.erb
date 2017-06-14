@@ -1,0 +1,13 @@
+<%= render 'partials/errors', obj: @chef %>
+
+<div class="row">
+  <div class="well col-md-8 col-md-offset-2">
+    <%= simple_form_for @chef,  wrapper: :horizontal_form,html: {class: 'form-horizontal'} do |f| %>
+        <%= f.input :chefname %>
+        <%= f.input :email, placeholder: 'user@domain.com'  %>
+        <%= f.input :password %>
+         <%= f.button :submit, @chef.new_record? ? 'Register' : 'Edit profile',
+                      class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>

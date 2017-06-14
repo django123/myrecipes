@@ -1,0 +1,151 @@
+/* pour mon entête de page j'ai du mettre ces bout de codes pris sur bootstrap*/
+$navbar-default-bg: #312312;
+$light-orange: #ff8c00;
+$navbar-default-brand-color: $light-orange;
+
+/* J'importe bootstrap et c'est bon et je le met aussi dans application.js*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*img {
+  @extend .img-responsive;
+  margin: 0 auto;
+}*/
+// override for the 'Home' navigation link
+
+.navbar-brand {
+  font-size: inherit;
+}
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+}
+.form {
+  @extend .col-md-6;
+}
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+}
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+}
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  background-color: #eee;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 65px; // accommodate the navbar
+}
+section {
+  @extend .row;
+  margin-top: 20px;
+}
+
+
+#logo{
+  margin-bottom: 10px;
+  margin-righ: 10px;
+  margin-top: 10px;
+  float: left;
+  font-size: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+
+}
+
+
+#logo:hover{
+  color: white;
+  text-decoration: none;
+}
+
+#body{
+  padding-top: 80px;
+
+}
+
+.nav_item{
+  margin-left: 25px;
+  float: left;
+  margin-top: 25px;
+}
+
+.center{
+  text-align: center;
+}
+
+h1, h2, h3, h4{
+  line-height: 1;
+}
+
+h1{
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h2{
+  font-size: 1.2em;
+  margin-bottom: 3px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+.left{
+  text-align: left;
+  letter-spacing: .5px;
+}
+
+/*.footer{
+  margin-top: 25px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}*/
+
+#main-footer{
+  margin-top: 5em;
+}
+
+.chef_info{
+  margin-top: 10px;
+}
+
+.gravatar{
+
+  @extend .img-responsive;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.input_checkbox input {
+  width: auto !important;
+}
+
+input {
+  height: auto !important;
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+.show_recipe {
+  margin: 10px 10px 10px 10px;
+}

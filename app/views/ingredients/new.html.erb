@@ -1,0 +1,10 @@
+<%= render 'shared/page_title', title: "Create a new Ingredient" %>
+<%= render 'shared/errors', obj: @ingredient %>
+<div class="row">
+  <div class="well col-md-8 col-md-offset-2">
+    <%= simple_form_for @ingredient, wrapper: :horizontal_form,html: {class: 'form-horizontal'} do |f| %>
+        <%= f.input :name %>
+        <%= f.button :submit, 'Create Ingredient', class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
