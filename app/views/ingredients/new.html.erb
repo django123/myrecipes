@@ -1,5 +1,7 @@
-<%= render 'shared/page_title', title: "Create a new Ingredient" %>
-<%= render 'shared/errors', obj: @ingredient %>
+<%= provide(:title, "Create a new Ingredient") %>
+
+<%= render 'partials/pages_title', title: "Create a new Ingredient" %>
+<%= render 'partials/errors', obj: @ingredient %>
 <div class="row">
   <div class="well col-md-8 col-md-offset-2">
     <%= simple_form_for @ingredient, wrapper: :horizontal_form,html: {class: 'form-horizontal'} do |f| %>

@@ -9,7 +9,7 @@ class PictureUploader < CarrierWave::Uploader::Base
    #pour deployer avec nos images sur heruko en suite on ira dans config/initializer on
    #créé un fichier carrier_wave.rb
    if Rails.env.production?
-     storage :fog
+     #storage :fog
    else
      storage :file
    end

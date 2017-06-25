@@ -1,5 +1,7 @@
-<%= render 'shared/page_title', title: "Create a new Style" %>
-<%= render 'shared/errors', obj: @style %>
+<%= provide(:title, "Create a new Style") %>
+
+<%= render 'partials/pages_title', title: "Create a new Style" %>
+<%= render 'partials/errors', obj: @style %>
 <div class="row">
   <div class="well col-md-8 col-md-offset-2">
     <%= simple_form_for @style, wrapper: :horizontal_form,html: {class: 'form-horizontal'} do |f| %>
